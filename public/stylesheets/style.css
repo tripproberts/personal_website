@@ -1,2 +1,72 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,600);
+
 body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0px;
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img.portrait {
+  width: 33%;
+  display: block;
+  margin: 20px auto;
+}
+
+.content {
+  background-color: #eeeeee;
+  padding: 50px 10px;
+}
+
+nav {
+  text-align: center;
+  margin: 30px auto;
+  transition: 0.5s ease;
+  webkit-transition: 0.5s ease;
+}
+
+nav a:hover {
+  border-bottom: 1px solid;
+}
+
+.icon_container {
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+  width: 160px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 1.5em;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 20px 20px;
+  border-radius: 20px 20px;
+  background-color: #eeeeee;
+  float: left;
+  margin-right: 20px;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  transition: background-color 0.5s ease-in;
+  webkit-transition: background-color 0.5s ease-in;
+  moz-transition: background-color 0.5s ease-in;
+  o-transition: background-color 0.5s ease-in;
+}
+
+a:last-child .icon {
+  margin-right: 0;
+}
+
+.icon:hover {
+  background-color: #bbb;
+  transition: 0.5s ease-in;
+  webkit-transition: 0.5s ease-in;
+  moz-transition: 0.5s ease-in;
+  o-transition: 0.5s ease-in;
 }
