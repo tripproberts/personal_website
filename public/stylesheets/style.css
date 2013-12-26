@@ -12,17 +12,19 @@ a {
 }
 
 img.portrait {
-  width: 33%;
+  width: 40%;
   display: block;
-  margin: 20px auto;
+  margin: 0px auto 20px auto;
 }
 
 .content {
   background-color: #eeeeee;
   padding: 50px 10px;
+  text-align: center;
 }
 
 nav {
+  font-size: 1.5em;
   text-align: center;
   margin: 30px auto;
   transition: 0.5s ease;
