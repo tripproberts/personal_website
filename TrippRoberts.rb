@@ -5,7 +5,7 @@ get '/' do
 end
 
 get '/resume' do
-  send_file './files/jack_roberts_resume.pdf'
+  send_file 'public/files/jack_roberts_resume.pdf'
 end
 
 not_found do
