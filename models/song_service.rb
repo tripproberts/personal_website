@@ -16,11 +16,11 @@ class SongService
   def self.parse_songs(songs)
     songs.map { |song|
       Song.new(
-        id: args[:id],
-        url: args[:permalink_url],
-        title: args[:title],
-        stream_url: args[:stream_url],
-        created_at: args[:created_at]
+        id: song[:id],
+        url: song[:permalink_url],
+        title: song[:title],
+        stream_url: song[:stream_url],
+        created_at: song[:created_at]
       )
     }
   end
