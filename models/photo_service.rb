@@ -1,5 +1,6 @@
 require 'instagram'
 require './models/photo'
+require "open-uri"
 
 class PhotoService
 
@@ -8,10 +9,18 @@ class PhotoService
     parse_photos(photos_from_service(limit))
   end
 
-
   def self.configure_service
     Instagram.configure do |config|
       config.client_id = ENV["INSTAGRAM_ID"]
+    end
+  end
+
+  def self.download(limit=5)
+    configure_service
+    photos_from_service(limit).each_with_index do |photo, i|
+      open("./public/images/photo_#{i}.jpg", 'wb') do |file|
+          file << open(photo[:images][:standard_resolution][:url]).read
+      end
     end
   end
 
