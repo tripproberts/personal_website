@@ -1,4 +1,5 @@
 require './models/photo_service'
+require 'timeout'
 
 class Photo
 
@@ -11,7 +12,25 @@ class Photo
   end
 
   def self.recent(limit=5)
-    PhotoService.recent_photos(limit)
+    begin
+      get_photos_from_photo_service(limit)
+    rescue Timeout::Error
+      get_cached_photos(limit)
+    end
+  end
+
+  private
+
+  def self.get_photos_from_photo_service(limit)
+    Timeout::timeout(3) do
+      PhotoService.recent_photos(limit)
+    end
+  end
+
+  def self.get_cached_photos(limit)
+    limit.times.map { |i|
+      Photo.new(image_url: "images/photo_#{i}.jpg")
+    }
   end
 
 end
