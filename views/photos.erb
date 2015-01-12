@@ -1,0 +1,7 @@
+<section class="photos">
+  <% @photos.each_with_index do |photo, i| %>
+    <div class="photo grayscale grayscale-fade">
+      <img class="<%= i %>" src="<%=photo.image_url%>" />
+    </div>
+  <% end %>
+</section>

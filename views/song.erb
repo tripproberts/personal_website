@@ -1,0 +1,24 @@
+<a class="song" href='javascript:window["<%= song.url %>"].togglePause(); false;' id="<%= song.id %>">
+  <div class="stack waveform" id="<%= song.title.downcase.gsub(" ","-") %>-waveform">
+  </div>
+  <div class="stack">
+    <div class="container">
+      <div class="control-icons row">
+        <i class="fa fa-play fa-3x"></i>
+        <i class="fa fa-pause fa-3x"></i>
+      </div>
+    </div>
+  </div>
+  <div class="stack">
+    <div class="container">
+      <div class="row">
+        <h2><%= song.title %></h2>
+        <h4><%= format_date(song.created_at) %></h4>
+      </div>
+    </div>
+  </div>
+</a>
+
+<script type="text/javascript" charset="utf-8">
+  initSong("<%= song.id %>", "<%= song.title.downcase.gsub(' ', '-')%>-waveform");
+</script>

@@ -1,0 +1,21 @@
+<html>
+
+<head>
+  <title><%= @title %></title>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="stylesheets/gray.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="screen" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <script src="http://connect.soundcloud.com/sdk.js"></script>
+  <script type="text/javascript" src="javascripts/waveform.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/application.js"></script>
+  <script src="javascripts/jquery.gray.js"></script>
+</head>
+
+<body>
+  <%= erb :header %>
+  <%= yield %>
+  <%= erb :footer %>
+</body>
+</html>

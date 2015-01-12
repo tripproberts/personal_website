@@ -1,6 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,600);
 
+h2, h4, p, a {
+  color: #333;
+}
+
 body {
+  width: 100%;
   font-family: 'Open Sans', sans-serif;
   margin: 0px;
   font-size: 1em;
@@ -8,18 +13,16 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
 }
 
-img.portrait {
+.frame {
   width: 40%;
   display: block;
   margin: 0px auto 20px auto;
 }
 
-.content {
-  background-color: #eeeeee;
-  padding: 50px 10px;
+header {
+  padding: 0px 10px 10px 10px;
   text-align: center;
 }
 
@@ -27,86 +30,338 @@ nav {
   font-size: 1.5em;
   text-align: center;
   margin: 30px auto;
-  transition: 0.5s ease;
-  webkit-transition: 0.5s ease;
-}
-
-nav a:hover {
-  border-bottom: 1px solid;
 }
 
 .icon_container {
   overflow: hidden;
   margin-right: auto;
   margin-left: auto;
-  width: 160px;
+  width: 200px;
   margin-bottom: 20px;
 }
 
 .icon {
+  width: 33.333%;
+  float: left;
+}
+
+a.circle {
   font-size: 1.5em;
   width: 40px;
-  height: 40px;
+  padding: 8px 0px;
   -webkit-border-radius: 20px 20px;
   border-radius: 20px 20px;
   background-color: #eeeeee;
-  float: left;
-  margin-right: 20px;
+  margin: 0 auto;
+  display: block;
   color: white;
   text-align: center;
   line-height: 40px;
-  transition: background-color 0.5s ease-in;
-  webkit-transition: background-color 0.5s ease-in;
-  moz-transition: background-color 0.5s ease-in;
-  o-transition: background-color 0.5s ease-in;
 }
 
-a:last-child .icon {
-  margin-right: 0;
-}
-
-.icon:hover {
+a.circle:hover {
   background-color: #bbb;
-  transition: 0.5s ease-in;
-  webkit-transition: 0.5s ease-in;
-  moz-transition: 0.5s ease-in;
-  o-transition: 0.5s ease-in;
+}
+
+.song {
+  display: block;
+  padding: 70px 0;
+  height: 100px;
+}
+
+.project {
+  width: 450px;
+  height: 300px;
+  float: left;
+  margin: 20px;
+  background-size: cover;
+  position: relative;
+}
+
+.song {
+  width: 100%;
+}
+
+.song p,
+.project p {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.song .stack .row {
+  margin-top: 33px;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.row {
+  width: 100%;
+  overflow: hidden;
+}
+
+.waveform,
+.project,
+.song {
+  background-color: #fff;
+}
+
+.song:hover {
+  background-color: #eee;
+}
+
+.waveform {
+  height: 100px;
+}
+
+.waveform canvas {
+  height: 100px;
+}
+
+.song .stack {
+  width: 100%
+}
+
+.stack {
+  position: absolute;
+}
+
+.sc-info {
+  overflow: hidden;
+}
+
+footer {
+  padding: 30px 0px;
+}
+
+.song h2,
+.project h2 {
+  font-weight: 300;
+  font-size: 32px;
+  margin-bottom: 5px;
+  line-height: 32px;
+}
+
+.project h2 {
+  margin-top: 120px;
+}
+
+.song h4 {
+  font-weight: 300;
+  margin: 0;
+  float: right;
+}
+
+.song h2 {
+  float: left;
+  margin-top: 0px;
+}
+
+.project h4,
+.project h2 {
+  z-index: 1000;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 72px;
+  letter-spacing: 6px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.photo {
+  width: 33.333%;
+  float: left;
+  padding: 20px 30px;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+
+.project h2 {
+  color: white;
+  text-align: center;
+}
+
+.project,
+.photo img {
+  transition: all .5s ease-in;
+}
+
+.photo img {
+  width: 100%;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+
+.project:hover,
+.photo .grayscale-replaced:hover,
+.photo img:hover {
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -o-transform: scale(1.01);
+  transform: scale(1.01);
+}
+
+header h2 {
+  font-weight: 300;
+  text-align: center;
+}
+
+section.photos {
+  overflow: hidden;
+}
+
+.song .row.control-icons {
+  text-align: center;
+  margin-top: 25px;
+}
+
+a.circle,
+.waveform,
+.waveform-bg,
+.song,
+.project,
+.photo img,
+.grayscale,
+.project span,
+nav a:before,
+.fa-play,
+.fa-pause {
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.fa-play,
+.fa-pause {
+  color: #eee;
+}
+
+.song .row {
+  line-height: 32px;
+}
+
+.fa-pause {
+  display: none;
+}
+
+ul.nav {
+  list-style: none;
+  overflow: hidden;
+  padding: 0px;
+}
+
+ul.nav li {
+  float: left;
+  width: 25%;
+  font-size: 20px;
+}
+
+nav a {
+  position: relative;
+}
+
+nav a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+nav a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.projects .container {
+  width: 980px;
+}
+
+.project span {
+  position: absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  opacity: 0;
+  background-size: cover;
+  background-position: 0 300px;
+  z-index: -1000;
+}
+
+.project:hover span {
+  opacity: 1;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 90%;
+    padding: 0 10px;
+  }
+
+  .song h2,
+  .project h2 {
+    float: none;
+  }
+
+  .song h4,
+  .project h4 {
+    margin-top: 5px;
+    float: none;
+    margin-bottom: 0px;
+  }
 }
 
 @media (min-width: 466px) {
-  .content {
+  header {
     font-size: 1.25em;
-  }
-
-  .tagline {
     width: 400px;
     margin-right: auto;
     margin-left: auto;
   }
 }
 
+@media (max-width: 600px) {
+  .photo {
+    width: 100%;
+  }
+}
+
 @media (min-width: 720px) {
 
-  img.portrait {
-    width: 140px;
-    float: left;
-    margin-right: 38px;
-    margin-top: -40px;
-    margin-bottom: 0px;
+  .frame {
+    width: 400px;
+    overflow: hidden;
   }
 
-  .content {
-    margin-top: 200px;
+  header {
     text-align: left;
     overflow: hidden;
-    padding: 0px 10px;
   }
 
   .tagline {
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
-    width: 550px;
+    width: 400px;
   }
 
 }
