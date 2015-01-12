@@ -312,9 +312,21 @@ nav a:hover:before {
 }
 
 @media (max-width: 1000px) {
+  .projects .container,
   .container {
     width: 90%;
     padding: 0 10px;
+  }
+
+  .project {
+    width: 100%;
+    margin: 20px 0;
+    background-size: auto;
+  }
+
+  .project span {
+    background-position: 0 600px;
+    background-size: auto;
   }
 
   .song h2,
@@ -336,6 +348,16 @@ nav a:hover:before {
     width: 400px;
     margin-right: auto;
     margin-left: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .project {
+    height: 200px;
+  }
+
+  .project h2 {
+    margin-top: 78px;
   }
 }
 
