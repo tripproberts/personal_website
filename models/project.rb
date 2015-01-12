@@ -4,12 +4,12 @@ class Project
     {
       url: "http://govastly.com",
       title: "Vastly",
-      image_url: "/images/vastly.jpg"
+      image_url: "/images/vastly.png"
     },
     {
       url: "http://hipster-rate.me",
       title: "Spotify Playlist Rater",
-      image_url: "/images/hipster.jpg"
+      image_url: "/images/hipster.png"
     }
   ]
 
