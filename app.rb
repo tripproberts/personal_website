@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/partial'
 require 'date'
+require 'newrelic_rpm'
 
 require './models/photo'
 require './models/song'
