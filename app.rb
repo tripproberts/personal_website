@@ -27,7 +27,7 @@ class TrippRoberts < Sinatra::Application
 
   get '/music' do
     @title = "Music - Tripp Roberts"
-    @songs = Song.recent(2)
+    @songs = Song.recent(3)
     erb :music
   end
 
