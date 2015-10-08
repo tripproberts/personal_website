@@ -7,7 +7,7 @@ class Project
       image_url: "/images/vastly.png"
     },
     {
-      url: "http://hipster-rate.me",
+      url: "http://hipster.tripp-roberts.com",
       title: "Spotify Playlist Rater",
       image_url: "/images/hipster.png"
     }
