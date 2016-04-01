@@ -14,7 +14,7 @@ class Song
   end
 
   def self.recent(limit=5)
-    SongService.recent_photos(limit)
+    SongService.recent_songs(limit)
   end
 
 end

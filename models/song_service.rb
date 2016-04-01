@@ -2,7 +2,7 @@ require './models/song'
 
 class SongService
 
-  def self.recent_photos(limit=5)
+  def self.recent_songs(limit=5)
     parse_songs(songs_from_service(limit))
   end
 
