@@ -12,6 +12,7 @@ class PhotoService
   def self.configure_service
     Instagram.configure do |config|
       config.client_id = ENV["INSTAGRAM_ID"]
+      config.client_secret = ENV["INSTAGRAM_SECRET"]
     end
   end
 
@@ -27,7 +28,7 @@ class PhotoService
   private
 
   def self.photos_from_service(limit)
-    Instagram.client.user_recent_media("231999328", {count: limit})
+    Instagram.client(access_token: File.read('./tokens/access_token.txt')).user_recent_media({count: limit})
   end
 
   def self.parse_photos(photos)
