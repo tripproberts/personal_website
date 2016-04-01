@@ -9,7 +9,7 @@ require './models/project'
 
 class TrippRoberts < Sinatra::Application
 
-  CALLBACK_URL = "http://localhost:9292/oauth/callback"
+  CALLBACK_URL = "http://tripp-roberts.com/oauth/callback"
 
   helpers do
     def format_date(date)
@@ -23,16 +23,16 @@ class TrippRoberts < Sinatra::Application
     erb :home
   end
 
-  get "/oauth/connect" do
-    PhotoService.configure_service
-    redirect Instagram.authorize_url(:redirect_uri => CALLBACK_URL)
-  end
+  #get "/oauth/connect" do
+  #  PhotoService.configure_service
+  #  redirect Instagram.authorize_url(:redirect_uri => CALLBACK_URL)
+  #end
 
-  get "/oauth/callback" do
-    response = Instagram.get_access_token(params[:code], :redirect_uri => CALLBACK_URL)
-    File.write('./tokens/access_token.txt', response.access_token)
-    redirect "/"
-  end
+  #get "/oauth/callback" do
+  #  response = Instagram.get_access_token(params[:code], :redirect_uri => CALLBACK_URL)
+  #  File.write('./tokens/access_token.txt', response.access_token)
+  #  redirect "/"
+  #end
 
   get '/resume' do
     send_file 'public/files/jack_roberts_resume_15_8_8.pdf'
