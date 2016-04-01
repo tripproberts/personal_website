@@ -168,9 +168,13 @@ footer {
 h1 {
   font-weight: 300;
   font-size: 72px;
-  letter-spacing: 6px;
+  letter-spacing: 2px;
   text-align: center;
   margin-bottom: 20px;
+}
+
+h1 span {
+  color: rgba(128, 128, 128, .21)
 }
 
 .photo {
