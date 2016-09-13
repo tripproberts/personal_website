@@ -199,7 +199,7 @@
       var done, head, script;
       script = document.createElement("script");
       done = false;
-      script.src = url;
+      script.src = url.replace("https", "http");
       script.async = true;
       script.onload = script.onreadystatechange = function() {
         if (!done && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete")) {
