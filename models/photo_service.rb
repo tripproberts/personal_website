@@ -28,7 +28,7 @@ class PhotoService
   private
 
   def self.photos_from_service(limit)
-    Instagram.client(access_token: File.read('./tokens/access_token.txt')).user_recent_media({count: limit})
+    Instagram.client(access_token: ENV["INSTAGRAM_OAUTH_ACCESS_TOKEN"]).user_recent_media({count: limit})
   end
 
   def self.parse_photos(photos)
