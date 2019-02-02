@@ -2,6 +2,11 @@ class Project
 
   Projects = [
     {
+      url: "https://www.journalbotapp.com",
+      title: "",
+      image_url: "/images/journal.png"
+    },
+    {
       url: "http://govastly.com",
       title: "Vastly",
       image_url: "/images/vastly.png"
