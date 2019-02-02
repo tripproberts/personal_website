@@ -37,7 +37,7 @@ class TrippRoberts < Sinatra::Application
   end
 
   get '/resume' do
-    send_file 'public/files/jack_roberts_resume_15_8_8.pdf'
+    send_file 'public/files/tripp-roberts-resume.pdf'
   end
 
   get '/music' do
