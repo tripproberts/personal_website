@@ -33,8 +33,9 @@ class PhotoService
 
   def self.parse_photos(photos)
     photos.map { |photo|
+      text = photo[:caption].nil? ? '' : photo[:caption][:text]
       Photo.new(
-        text: photo[:caption][:text],
+        text: text,
         image_url: photo[:images][:standard_resolution][:url],
         link: photo[:link]
       )
